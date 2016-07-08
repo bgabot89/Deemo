@@ -1,13 +1,24 @@
 <!doctype html>
-<html ng-app="character-app">
+<html>
   <head>
     <title>Deemo</title>
+    <link rel="stylesheet" href="css/index.css">
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/character-list.js"></script>
   </head>
   <body>
     <p> Deemo </p>
-    <character-list> </character-list>
+    <div ng-app="character-app">
+      <button class="btn btn-danger" ng-click="show=!show">Click me for Show/Hide</button>
+    <character-list ng-if="show"> </character-list>
+    <p> State is: {{show}} </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gz83g-82Q9c" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dWR9Fmypx4w?list=RDGz83g-82Q9c" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xgzNn8gHSgk?list=RDGz83g-82Q9c" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div ng-show="show">
+    <p>something something</p>
+  </div>
   </body>
 </html>

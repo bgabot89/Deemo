@@ -1,9 +1,11 @@
 //creates a component named character-list, along with controller and template render
-angular.module('character-app').component('characterList', {
+angular.module('character-app')
+.component('characterList', {
   template:
     '<ul>' +
     '<li ng-repeat="character in $ctrl.characters">' +
-      '<span>{{character.name}}</span>' +
+      '<img ng-src="{{character.image}}">' + '<br>' +
+      '<span>{{character.name}}</span>' + '<br>' +
       '<p>{{character.description}}</p>' +
       '</li>' +
     '</ul>',
@@ -11,10 +13,12 @@ angular.module('character-app').component('characterList', {
     this.characters = [
     {
       name: 'Deemo',
-      description: 'An enigmatic figure.'
+      description: 'An enigmatic figure.',
+      image: 'images/deemo_icon.png'
     }, {
       name: 'The Girl',
-      description: 'A girl who has lost her memories'
+      description: 'A girl who has lost her memories',
+      image: 'images/the_girl_icon.png'
     }
   ];
 }

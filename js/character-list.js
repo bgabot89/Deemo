@@ -13,7 +13,7 @@ angular.module('character-app')
     this.characters = [
     {
       name: 'Deemo',
-      description: 'An enigmatic figure.',
+      description: 'An enigmatic figure who lives in solitude. Proficient in playing the piano.',
       image: 'images/deemo_icon.png'
     }, {
       name: 'The Girl',

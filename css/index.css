@@ -1,3 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+
+p {
+  font-size: 20px;
+}
+
 ul {
   list-style: none;
+}
+
+p,ul,h1 {
+   color: white;
+   font-family: 'Bad Script', cursive;
+}
+
+img {
+  border-radius: 50%;
+}
+
+body {
+  background-color: grey;
+}
+
+#Story, #Characters, #Media, #Music:hover {
+  cursor: pointer;
 }

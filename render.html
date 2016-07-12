@@ -1,22 +1,21 @@
 <!doctype html>
-<html>
+<html ng-app="myapp">
   <head>
     <title>Deemo</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="node_modules/angular/angular.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/character-list.js"></script>
+    <script src="js/new.js"></script>
   </head>
   <body>
     <p> Deemo </p>
-    <div ng-app="character-app">
-      <div ng-if="showpp">
-    <h1> Story </h1>
-    <p> Deemo is a mystic character lives in solitude, a castle, all by itself. A little girl falls from the sky, not knowing who she is, where she comes from. To help the little girl back to her world, Deemo comes to realize a tree keeps growing tall on top of the piano whenever it plays. What would Deemo do when it gets comfortable with the companionship it never had before? What if the little girl couldn't deal with the truth when her seemingly lost memories regained?!
-      "Never left without saying goodbye".</p>
+    <div ng-controller="characterController">
+      <div ng-show="show==1">
+        <p> Deemo is a mystic character lives in solitude, a castle, all by itself. A little girl falls from the sky, not knowing who she is, where she comes from. To help the little girl back to her world, Deemo comes to realize a tree keeps growing tall on top of the piano whenever it plays. What would Deemo do when it gets comfortable with the companionship it never had before? What if the little girl couldn't deal with the truth when her seemingly lost memories regained?!
+          "Never left without saying goodbye".</p>
+      </div>
+      <div ng-show="show==2">
+      <character-Header ng-repeat="character in characters" character-data="character" />
     </div>
-    <character-list ng-if="show"> </character-list>
-    <p> State is: {{show}} </p>
     <svg version="1.1" id="navbar_xA0_Image_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
        x="0px" y="0px" viewBox="0 0 1366.9 720" style="enable-background:new 0 0 1366.9 720;" xml:space="preserve">
     <style type="text/css">
@@ -52,15 +51,14 @@
     <image style="overflow:visible;" width="504" height="187" xlink:href="images/Deemo_logo.png"  transform="matrix(1 0 0 1 443.5482 266.5)">
     </image>
     <rect x="186.8" y="389.7" class="st2" width="175.6" height="92.2"/>
-    <text id="Story" ng-click="showpp=!showpp" transform="matrix(1 0 0 1 186.8186 458.6996)" class="st3 st4 st5">Story</text>
+    <text id="Story" ng-click="show = 1" transform="matrix(1 0 0 1 186.8186 458.6996)" class="st3 st4 st5">Story</text>
     <rect x="378.8" y="435.8" class="st2" width="296.5" height="92.2"/>
-    <text id="Characters" ng-click="show=!show" transform="matrix(1 0 0 1 378.7764 504.8183)" class="st3 st4 st5">Characters</text>
+    <text id="Characters" ng-click="show = 2" transform="matrix(1 0 0 1 378.7764 504.8183)" class="st3 st4 st5">Characters</text>
     <rect x="745.7" y="444.7" class="st2" width="175.6" height="92.2"/>
     <text id="Music" transform="matrix(1 0 0 1 745.7211 513.7209)" class="st3 st4 st5">Music</text>
     <rect x="974" y="406.3" class="st2" width="175.6" height="92.2"/>
     <text id="Media" transform="matrix(1 0 0 1 973.9702 475.324)" class="st3 st4 st5">Media</text>
   </svg>
-  </div>
-
+    </div>
   </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<!--Example reference for function calls in Angular -->
+<title>AngularJS on click function call</title>
+<script src="node_modules/angular/angular.min.js"></script>
+<script>
+
+	var app = angular.module('myApp', []);
+
+	app.controller('controller', ['$scope', function($scope) {
+	    $scope.function1 = function(msg) {
+	         alert(msg + ' first function call!');
+	    };
+	    $scope.function2 = function(msg) {
+	         alert(msg + ' second function call!');
+	    };
+      $scope.function3 = function(msg) {
+           alert(msg + ' third function call!');
+      };
+	}]);
+</script>
+</head>
+<body>
+	<div data-ng-app="myApp">
+		<div data-ng-controller="controller">
+			<button data-ng-click="function1('AngularJS')">Call first function</button>
+			<button data-ng-click="function2('AngularJS')">Call second function</button>
+      <button data-ng-click="function3('AngularJS')">Call third function</button>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html ng-app="myapp">
+  <head>
+    <title>Deemo</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="/static/cdn/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="/static/cdn/jquery.fancybox.pack.js"></script>
+    <script src="/static/js/new.js"></script>
+    <script src="/static/js/fancybox.js"></script>
+  </head>
+  <body>
+    <p> Deemo </p>
+    <a href="/static/images/deemo_by_daikazoku63.jpg" class="fancybox" title="By: daikazoku63"><img width= "200px" src="/static/images/deemo_by_daikazoku63.jpg"/></a>
+    <div ng-controller="characterController">
+      <div ng-show="show==1">
+        <p> Deemo is a mystic character lives in solitude, a castle, all by itself. A little girl falls from the sky, not knowing who she is, where she comes from. To help the little girl back to her world, Deemo comes to realize a tree keeps growing tall on top of the piano whenever it plays. What would Deemo do when it gets comfortable with the companionship it never had before? What if the little girl couldn't deal with the truth when her seemingly lost memories regained?!
+          "Never left without saying goodbye".</p>
+      </div>
+      <div ng-show="show==2">
+      <character-Header ng-repeat="character in characters" character-data="character" />
+    </div>
+    <div ng-show="show==3">
+  </div>
+    <div ng-show="show==4">
+      <form class="form-inline">
+      <input ng-model="query" type="text" placeholder="Search by Artist" autofocus>
+      </form>
+      <ul ng-repeat="gallery in galleries | filter: query">
+        <li> by: {{ gallery.name }} </li>
+      </ul>
+  </div>
+    <svg version="1.1" id="navbar_xA0_Image_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+       x="0px" y="0px" viewBox="0 0 1366.9 720" style="enable-background:new 0 0 1366.9 720;" xml:space="preserve">
+    <style type="text/css">
+      .st0{fill:#050505;}
+      .st1{fill:#AFAFAF;}
+      .st2{fill:none;}
+      .st3{fill:#FFFFFF;}
+      .st4{font-family:'BadScript-Regular';}
+      .st5{font-size:72px;}
+    </style>
+    <path class="st0" d="M768.9,243.1c0,0-33.2-131.2-179.1-43.5c0.6,15.6,3.9,89.9-111.6,48.6c-17.7-10-57.1-10.4-59,27
+      c-16.1,15.3-11.4,24.9-52.2,23c-40.8-1.9-106.2-14.4-114.8,51.7c-20.6-6.4-67.2-8.6-87.1,26.6c-24.2,3.2-23.3,25.5-10.8,33.2
+      c7.6,5.6,15.7,7.2-10.7,17.4s-68.6,25.1-67,47.2c2,5.1,1,6.7,33,16.9c18.8,8.7,22.9,8.7,25.4,26.2c3.6,12.3,15.2,38.5,36.6,28.7
+      c16.8-6.2,58.4-22.6,68.6-13.8c11.7,12.3,49.6,76,84.5,49.9c25.9-15.7,34.5-24.8,47-22.7c12.5,2.2,4.4,22,25.5,19.9
+      c21.1-2.2,18.5-21.6,28-11.6c9.5,10,30.6,34.8,61.6,15c8.2-6.9,10.3-20.1,36.1-11.8c9.3,3,9.6,16.9,15,17.9
+      c9.5,1.7,21.7-10.2,32.9-3c17.5,11.2,14.7,17.6,31.6,11.1c16.9-6.5,47.6,127.4,146.7-2c8.5-3.6,44.9-31.4,87-34
+      c29.4-1.8,67.4,23.5,75.5,15.3c15.1-10.2,40.3-36.8,54.2-13.1c8.1,13.8,8-3,16.2-2.2c5.4,0.5,27.4,32.5,51.3,33.7
+      c17.6,0.9,38.1-26.9,44-35.3c14-19.6,45.4-39,63-29.4c21.4,11.5,48.9,31.2,69.8-2.4c4.3-14.9,2.1-29.1,34.9-36.3
+      c11.3-1.2,30.4-12,28.6-17.5c-1.8-5.4,3.6-22.3-82.3-51.8c-4.2-4.8-6.6-9,4.8-16.3c-0.6-9.6,12.3-41.6-72.9-42.6
+      c-7.3-1.3-23.7-2.5-29.6-23.8c-5.6-20.2-25.7-5.4-18.4-25.7c3.4-9.5-16.5-25.7-76.9-18s-63.6-10.9-67.4-22.5
+      c-3.8-11.6-10.2-44.9-51.5-31.5s-59.1,32.1-79.5,24.4C779.6,258.5,768.9,243.1,768.9,243.1z"/>
+    <path class="st1" d="M787.9,228.9c0,0-32.7-128.2-176.7-42.5c0.5,15.3,3.8,87.8-110.2,47.4c-17.5-9.8-56.3-10.1-58.2,26.4
+      c-15.9,15-11.2,24.3-51.5,22.5c-40.2-1.9-104.8-14-113.3,50.5c-20.4-6.2-66.3-8.4-85.9,26c-23.9,3.1-23,24.9-10.6,32.4
+      c7.5,5.5,15.5,7-10.5,17s-67.7,24.6-66.2,46.1c2,5,1,6.5,32.6,16.5c18.5,8.5,22.6,8.5,25.1,25.6c3.5,12,15,37.6,36.1,28.1
+      c16.5-6,57.6-22.1,67.7-13.5c11.5,12,48.9,74.3,83.4,48.8c25.5-15.3,34.1-24.3,46.4-22.1c12.3,2.1,4.3,21.5,25.2,19.4
+      c20.9-2.1,18.2-21.1,27.6-11.3s30.2,34,60.8,14.7c8.1-6.7,10.2-19.7,35.6-11.5c9.2,3,9.5,16.5,14.8,17.5c9.4,1.7,21.4-9.9,32.5-3
+      c17.3,10.9,14.5,17.2,31.2,10.9c16.7-6.3,47,124.5,144.8-1.9c8.4-3.5,44.4-30.7,85.8-33.3c29-1.8,66.5,22.9,74.5,15
+      c14.9-10,39.8-35.9,53.5-12.8c8,13.5,7.9-3,16-2.2c5.3,0.5,27,31.8,50.6,32.9c17.4,0.8,37.5-26.3,43.4-34.5
+      c13.8-19.2,44.8-38.1,62.2-28.8c21.1,11.3,48.3,30.5,68.9-2.3c4.2-14.5,2.1-28.5,34.4-35.5c11.2-1.2,30-11.8,28.2-17.1
+      c-1.8-5.3,3.5-21.8-81.2-50.6c-4.1-4.7-6.5-8.8,4.7-15.9c-0.6-9.4,12.1-40.6-72-41.6c-7.2-1.3-23.4-2.4-29.2-23.3
+      c-5.5-19.8-25.4-5.3-18.2-25.1c3.4-9.3-16.3-25.1-75.9-17.6c-59.6,7.5-62.7-10.7-66.5-22c-3.8-11.3-10-43.9-50.8-30.7
+      c-40.8,13.2-58.4,31.4-78.4,23.8C798.5,243.9,787.9,228.9,787.9,228.9z"/>
+    <image style="overflow:visible;" width="504" height="187" xlink:href="/static/images/Deemo_logo.png"  transform="matrix(1 0 0 1 443.5482 266.5)">
+    </image>
+    <rect x="186.8" y="389.7" class="st2" width="175.6" height="92.2"/>
+    <text id="Story" ng-click="show = 1" transform="matrix(1 0 0 1 186.8186 458.6996)" class="st3 st4 st5">Story</text>
+    <rect x="378.8" y="435.8" class="st2" width="296.5" height="92.2"/>
+    <text id="Characters" ng-click="show = 2" transform="matrix(1 0 0 1 378.7764 504.8183)" class="st3 st4 st5">Characters</text>
+    <rect x="745.7" y="444.7" class="st2" width="175.6" height="92.2"/>
+    <text id="Music" ng-click="show = 3" transform="matrix(1 0 0 1 745.7211 513.7209)" class="st3 st4 st5">Music</text>
+    <rect x="974" y="406.3" class="st2" width="175.6" height="92.2"/>
+    <text id="Media" ng-click="show = 4" transform="matrix(1 0 0 1 973.9702 475.324)" class="st3 st4 st5">Fanart</text>
+  </svg>
+    </div>
+  </body>
+</html>

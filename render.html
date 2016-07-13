@@ -4,10 +4,17 @@
     <title>Deemo</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="node_modules/angular/angular.min.js"></script>
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="cdn/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="cdn/jquery.fancybox.pack.js"></script>
     <script src="js/new.js"></script>
+    <script src="js/fancybox.js"></script>
   </head>
   <body>
     <p> Deemo </p>
+    <a href="images/deemo_by_daikazoku63.jpg" class="fancybox" title="By: daikazoku63"><img width= "200px" src="images/deemo_by_daikazoku63.jpg"/></a>
     <div ng-controller="characterController">
       <div ng-show="show==1">
         <p> Deemo is a mystic character lives in solitude, a castle, all by itself. A little girl falls from the sky, not knowing who she is, where she comes from. To help the little girl back to her world, Deemo comes to realize a tree keeps growing tall on top of the piano whenever it plays. What would Deemo do when it gets comfortable with the companionship it never had before? What if the little girl couldn't deal with the truth when her seemingly lost memories regained?!
@@ -23,7 +30,7 @@
       <input ng-model="query" type="text" placeholder="Search by Artist" autofocus>
       </form>
       <ul ng-repeat="gallery in galleries | filter: query">
-        <li> {{ gallery.name }} </li>
+        <li> by: {{ gallery.name }} </li>
       </ul>
   </div>
     <svg version="1.1" id="navbar_xA0_Image_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

@@ -16,6 +16,16 @@
       <div ng-show="show==2">
       <character-Header ng-repeat="character in characters" character-data="character" />
     </div>
+    <div ng-show="show==3">
+  </div>
+    <div ng-show="show==4">
+      <form class="form-inline">
+      <input ng-model="query" type="text" placeholder="Search by Artist" autofocus>
+      </form>
+      <ul ng-repeat="gallery in galleries | filter: query">
+        <li> {{ gallery.name }} </li>
+      </ul>
+  </div>
     <svg version="1.1" id="navbar_xA0_Image_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
        x="0px" y="0px" viewBox="0 0 1366.9 720" style="enable-background:new 0 0 1366.9 720;" xml:space="preserve">
     <style type="text/css">
@@ -55,9 +65,9 @@
     <rect x="378.8" y="435.8" class="st2" width="296.5" height="92.2"/>
     <text id="Characters" ng-click="show = 2" transform="matrix(1 0 0 1 378.7764 504.8183)" class="st3 st4 st5">Characters</text>
     <rect x="745.7" y="444.7" class="st2" width="175.6" height="92.2"/>
-    <text id="Music" transform="matrix(1 0 0 1 745.7211 513.7209)" class="st3 st4 st5">Music</text>
+    <text id="Music" ng-click="show = 3" transform="matrix(1 0 0 1 745.7211 513.7209)" class="st3 st4 st5">Music</text>
     <rect x="974" y="406.3" class="st2" width="175.6" height="92.2"/>
-    <text id="Media" transform="matrix(1 0 0 1 973.9702 475.324)" class="st3 st4 st5">Media</text>
+    <text id="Media" ng-click="show = 4" transform="matrix(1 0 0 1 973.9702 475.324)" class="st3 st4 st5">Fanart</text>
   </svg>
     </div>
   </body>

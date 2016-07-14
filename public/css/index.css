@@ -21,6 +21,6 @@ body {
   background-color: grey;
 }
 
-#Story, #Characters, #Media, #Music:hover {
+#Story, #Characters, #Media, #logo, #Music:hover {
   cursor: pointer;
 }

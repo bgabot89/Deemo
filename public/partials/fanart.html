@@ -1,0 +1,7 @@
+<form class="form-inline">
+  <input ng-model="search.name" type="text" placeholder="Search by Artist" autofocus>
+  </form>
+  <ul ng-repeat="gallery in galleries | filter: search">
+    <li><a href="{{gallery.image}}" class="fancybox" title="By: {{gallery.name}}"><img width= "200px" src="{{gallery.image}}"/></a></li>
+    <li> by: {{ gallery.name }} </li>
+  </ul>

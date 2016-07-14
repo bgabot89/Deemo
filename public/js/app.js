@@ -43,8 +43,9 @@ var app = angular.module('myapp', ['ngRoute']);
         app.controller('characterController', function($scope) {
           //creates a message to display in our view
           $scope.characters = [
-                 { name: 'Deemo', info: 'An enigmatic figure who lives in solitude. Proficient in playing the piano.', image: '/static/images/deemo_icon.png'},
-                 { name: 'The Girl', info: 'A girl who has lost her memories', image: '/static/images/the_girl_icon.png'}
+                 { name: 'Deemo', info: 'A silent, enigmatic pianist who lives in solitude. ', image: '/static/images/deemo_icon.png'},
+                 { name: 'The Girl', info: 'A girl who fell from the sky suffering from amnesia.', image: '/static/images/the_girl_icon.png'},
+                 { name: 'The Masked Lady', info: "A masked woman living in Deemo's world. She questions the actions of Deemo and the girl throughout the story.", image: '/static/images/the_maskedlady_icon.png'}
                ];
         });
         //creates a controller named fanartController and inject Angular's $scope
@@ -52,6 +53,7 @@ var app = angular.module('myapp', ['ngRoute']);
           $scope.galleries = [
             { name: 'Daikazoku63', image: '/static/images/deemo_by_daikazoku63.jpg' },
             { name: 'Sishenfan', image: '/static/images/deemo_by_sishenfan.jpg' },
+            { name: 'Ayatoki', image: '/static/images/deemo_by_ayatoki.jpg' },
             { name: 'Sonnyaws', image: '/static/images/deemo_by_sonnyaws.jpg' }
           ];
           $scope.$on('$locationChangeStart',

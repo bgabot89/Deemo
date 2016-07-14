@@ -11,19 +11,8 @@ app.use("/static", express.static("public"));
 
 //get request to server to render index page
 app.get('/', function(req,res){
-	res.sendfile('./views/index.html');
+	res.sendFile(path.join(__dirname, './views', 'index.html'));
 });
-
-//get request to server to render story page
-app.get('/story', function(req,res){
-	res.sendfile('./views/story.html');
-});
-
-//get request to server to render characters page
-app.get('/characters', function(req,res){
-	res.sendfile('./views/character.html');
-});
-
 
 //connects server to local port 3000
 app.listen(process.env.PORT  || 3000, function (){

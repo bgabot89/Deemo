@@ -4,19 +4,19 @@
   "description": "AngularJS app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bgabot89/Deemo.git"
-  },
-  "scripts": {
-    "start": "server.js"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bgabot89/Deemo/issues"
   },
-  "homepage": "https://github.com/bgabot89/Deemo#readme"
+  "homepage": "https://github.com/bgabot89/Deemo#readme",
+  "dependencies": {
+    "angular-youtube-embed": "^1.3.0"
+  }
 }

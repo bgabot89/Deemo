@@ -1,5 +1,5 @@
 //Creates an angular module called myapp then proceeds to declare a controller who ties in the data, and the directive which will create the html template for the data.
-var app = angular.module('myapp', ['ngRoute']);
+var app = angular.module('myapp', ['ngRoute', 'youtube-embed']);
         //configure routes
         app.config(function($routeProvider, $locationProvider) {
           $routeProvider
@@ -23,10 +23,15 @@ var app = angular.module('myapp', ['ngRoute']);
             templateUrl: '../static/partials/fanart.html',
             controller: 'fanartController'
           })
+          //route for the video page
+          .when('/videos', {
+            templateUrl: '../static/partials/videos.html',
+            controller: 'youtubeController'
+          })
           //use the HTML5 History API, will remove # from url
           $locationProvider.html5Mode({
             enabled: true,
-            requireBase: false
+            // requireBase: false
           })
         });
           //creates a controller named mainController and inject Angular's $scope
@@ -62,4 +67,23 @@ var app = angular.module('myapp', ['ngRoute']);
                 event.preventDefault();
               }
             });
+        });
+        //creates controller for youtube videos
+        app.controller('youtubeController', function($scope) {
+          //video ids for each
+          var first = 'BFdhd8lly58';
+          var second = 'dWR9Fmypx4w';
+          var third = '7DhiOubbBTo';
+          $scope.dynamic = {
+            video: first,
+            change: function() {
+              if ($scope.dynamic.video === first) {
+                $scope.dynamic.video = second;
+                console.log($scope.dynamic.video);
+              } else {
+                $scope.dynamic.video = first;
+                console.log($scope.dynamic.video);
+              }
+              }
+            }
         });

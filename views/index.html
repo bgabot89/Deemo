@@ -3,7 +3,8 @@
   <head>
     <title>Deemo</title>
     <link rel="stylesheet" href="/static/css/index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="/scripts/angular/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
     <!-- Add jQuery library -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -11,8 +12,11 @@
     <link rel="stylesheet" href="/static/cdn/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/static/cdn/jquery.fancybox.pack.js"></script>
     <script src="/static/js/app.js"></script>
-    <script src="/static/js/gallery.js"></script>
     <script src="/static/js/fancybox.js"></script>
+    <!--include YT library and this directive -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src='/scripts/angular-youtube-embed/src/angular-youtube-embed.js'></script>
+    <base href="/index.html">
   </head>
   <body ng-controller="mainController">
     <p> Deemo </p>
@@ -57,7 +61,7 @@
 <rect x="378.8" y="435.8" class="st2" width="296.5" height="92.2"/>
 <a href="characters"><text id="Characters" ng-click="show = 2" transform="matrix(1 0 0 1 378.7764 504.8183)" class="st3 st4 st5">Characters</text></a>
 <rect x="745.7" y="444.7" class="st2" width="175.6" height="92.2"/>
-<text id="Music" ng-click="show = 3" transform="matrix(1 0 0 1 745.7211 513.7209)" class="st3 st4 st5">Music</text>
+<a href="videos"><text id="Music" ng-click="show = 3" transform="matrix(1 0 0 1 745.7211 513.7209)" class="st3 st4 st5">Music</text></a>
 <rect x="974" y="406.3" class="st2" width="175.6" height="92.2"/>
 <a href="fanart"><text id="Media" ng-click="show = 4" transform="matrix(1 0 0 1 973.9702 475.324)" class="st3 st4 st5">Fanart</text></a>
 </svg>

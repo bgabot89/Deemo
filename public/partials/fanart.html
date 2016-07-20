@@ -1,7 +1,9 @@
+<div class="row"><h1> {{message}} </h1>
 <form class="form-inline">
   <input ng-model="search.name" type="text" placeholder="Search by Artist" autofocus>
   </form>
-  <ul ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="gallery in galleries | filter: search">
-    <li><a href="{{gallery.image}}" class="fancybox" title="By: {{gallery.name}}"><img width= "200px" src="{{gallery.image}}"/></a></li>
-    <li> by: {{ gallery.name }} </li>
+  <ul class= "col-lg-3" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="gallery in galleries | filter: search">
+    <li><a href="{{gallery.imageURL}}" class="fancybox" title="By: {{gallery.name}}"><img height="200px" width= "200px" src="{{gallery.image}}"/></a></li>
+    <li id="gallery-name"> by: {{ gallery.name }} </li>
   </ul>
+</div>

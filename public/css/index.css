@@ -9,8 +9,17 @@ ul {
 }
 
 p,ul,h1 {
-   color: white;
-   font-family: 'Bad Script', cursive;
+   color: white !important;
+   font-family: 'Bad Script', cursive !important;
+}
+
+.char-info {
+  margin-top: 50px;
+}
+
+#gallery-name {
+  margin-top:30px;
+  font-size: 20px;
 }
 
 img {
@@ -54,4 +63,26 @@ body {
 .ng-scope {
   text-align: center;
   margin: 30px;
+}
+
+#page-view {
+  background-color: #4a4a4a;
+  border-radius: 80px;
+  border-style: double;
+  border-width: 15px;
+}
+
+#story {
+  padding: 50px;
+}
+
+.col-md-3 {
+  margin-left: 70px;
+}
+
+.st3:hover {
+  fill: yellow;
+}
+a {
+  text-decoration: none !important;
 }
